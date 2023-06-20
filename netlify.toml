@@ -1,5 +1,4 @@
 [[redirects]]
-from = "/index.html"
-to = "dashboard"
-status = 301
-force = true
+  from = "/"
+  to = "/dashboard/index.html"
+  status = 200
