@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login Page</title>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Login</h2>
+      <form id="login-form">
+        <input type="text" id="username" placeholder="Username" required />
+        <input type="password" id="password" placeholder="Password" required />
+        <button type="submit">Login</button>
+      </form>
+    </div>
+    <script>
+      document
+        .getElementById("login-form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          var username = document.getElementById("username").value;
+          var password = document.getElementById("password").value;
+
+          fetch("http://localhost:1337/api/auth/local", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              identifier: username,
+              password: password,
+            }),
+          })
+            .then(async (response) => {
+              if (response.ok) {
+                const token = response.headers.get("Authorization");
+                await localStorage.setItem("token", token);
+
+                // window.location.href = "../frontend/dashboard/dashboard.html";
+                window.location.href = "../dashboard/dashboard.html";
+              } else {
+                alert("Invalid username or password");
+              }
+            })
+            .catch((error) => {
+              console.error("Error:", error);
+            });
+        });
+    </script>
+  </body>
+</html>

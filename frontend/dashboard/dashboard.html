@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>HTML Forms</h2>
+    <button id="logout-button" onclick="logout()">Logout</button>
+    <form id="myForm">
+      <label for="name">Name:</label><br />
+      <input
+        type="text"
+        name="name"
+        id="name"
+        placeholder="Field 1"
+        required
+      /><br />
+
+      <label for="email">Email:</label><br />
+      <input
+        type="text"
+        name="email"
+        id="email"
+        placeholder="Field 2"
+        required
+      /><br />
+
+      <label for="message">Message:</label><br />
+      <input
+        type="text"
+        name="message"
+        id="message"
+        placeholder="Field 3"
+        required
+      /><br />
+
+      <input type="submit" value="Submit" />
+    </form>
+    <br />
+    <button id="job-button" onclick="goToJob()">Job Page</button>
+    <script src="dashboard.js"></script>
+  </body>
+</html>
