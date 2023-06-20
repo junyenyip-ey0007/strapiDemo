@@ -1,7 +1,7 @@
 function checkAuthentication() {
   const token = localStorage.getItem("token");
   if (!token) {
-    window.location.href = "../login/login.html";
+    window.location.href = "../login/index.html";
   }
 }
 
@@ -10,7 +10,7 @@ checkAuthentication();
 function logout() {
   localStorage.removeItem("token");
 
-  window.location.href = "../login/login.html";
+  window.location.href = "../login/index.html";
 }
 
 document.getElementById("logout-button").addEventListener("click", logout);
