@@ -1,7 +1,7 @@
 function checkAuthentication() {
   const token = localStorage.getItem("token");
   if (!token) {
-    window.location.href = "../login/login.html";
+    window.location.href = "../../index.html";
   }
 }
 

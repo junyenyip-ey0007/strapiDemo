@@ -1,7 +1,7 @@
 function checkAuthentication() {
   const token = localStorage.getItem("token");
   if (!token) {
-    window.location.href = "../login/index.html";
+    window.location.href = "../../index.html";
   }
 }
 
@@ -10,7 +10,7 @@ checkAuthentication();
 function logout() {
   localStorage.removeItem("token");
 
-  window.location.href = "../login/index.html";
+  window.location.href = "../../index.html";
 }
 
 document.getElementById("logout-button").addEventListener("click", logout);
@@ -47,5 +47,5 @@ document.getElementById("myForm").addEventListener("submit", function (event) {
 });
 
 function goToJob() {
-    window.location.href = "../job/job.html";
+    window.location.href = "../job/index.html";
   }
