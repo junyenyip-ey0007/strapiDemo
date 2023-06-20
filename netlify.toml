@@ -1,5 +1,5 @@
 [[redirects]]
-  from = "/*"
-  to = "/frontend/dashboard/index.html"
-  status = 200
-  force = true
+from = "/index.html"
+to = "/frontend/dashboard/index.html"
+status = 200
+force = true
