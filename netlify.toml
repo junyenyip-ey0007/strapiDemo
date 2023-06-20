@@ -1,0 +1,4 @@
+[[redirects]]
+from = "/index.html"
+to = "/frontend/dashboard/dashboard.html"
+status = 301
