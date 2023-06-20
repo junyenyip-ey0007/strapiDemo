@@ -1,5 +1,5 @@
 [[redirects]]
 from = "/index.html"
-to = "/frontend/dashboard/index.html"
+to = "../dashboard/index.html"
 status = 301
 force = true
